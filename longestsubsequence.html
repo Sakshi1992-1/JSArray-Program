@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function longestConseqSubseq(arr, n) {
+        var x = 0,
+          count = 0;
+        arr.sort(function (a, b) {
+          return a - b;
+        });
+
+        var v = [];
+        v.push(arr[0]);
+
+        for (let i = 1; i < n; i++) {
+          if (arr[i] != arr[i - 1]) v.push(arr[i]);
+        }
+
+        for (let i = 0; i < v.length; i++) {
+          if (i > 0 && v[i] == v[i - 1] + 1) count++;
+          else count = 1;
+
+          x = Math.max(x, count);
+        }
+        return x;
+      }
+
+      let arr = [2, 6, 1, 9, 4, 5, 3];
+      let n = arr.length;
+      document.write(
+        "The length of the longest sub-sequence is " +
+          longestConseqSubseq(arr, n)
+      );
+      console.log(longestConseqSubseq(arr, n));
+    </script>
+  </body>
+</html>

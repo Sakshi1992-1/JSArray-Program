@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Calculate the depth of Arrays using functions/
+      function CalArrayDepth(obj) {
+        if (Array.isArray(obj))
+          return 1 + Math.max(...obj.map((t) => CalArrayDepth(t)));
+        else return 0;
+      }
+      document.write("For the result pls check the consol:)");
+      console.log(CalArrayDepth([1, [2, [3, 4]]]));
+      console.log(CalArrayDepth([1, 2, 3, 41]));
+    </script>
+  </body>
+</html>

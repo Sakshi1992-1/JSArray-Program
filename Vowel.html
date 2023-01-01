@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--// created a function to find the nearest vowel to the letter?
+            //   function nearestVowel(s) {
+            //     let obj = { a: 99, e: 99, i: 99, o: 99, u: 99 };
+            //     let min = 99;
+            //     let sol = "";
+            //     for (let char of [..."aeiou"]) {
+            //       let diff = Math.abs(char.charCodeAt(0) - s.charCodeAt(0));
+            //       if (diff < min) {
+            //         min = diff;
+            //         sol = char;
+            //       }
+            //     }
+            //     return sol;
+            //   }
+            // console.log(nearestVowel("s"));-->
+
+    <!--Without Function using Swiych-->
+    <input id="myInput" type="text" />
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var output;
+        var userinput = document.getElementById("myInput").value;
+        switch (userinput) {
+          case "b":
+          case "c":
+            output = "a";
+            break;
+          case "d":
+          case "f":
+          case "g":
+            output = "e";
+            break;
+          case "h":
+          case "j":
+          case "k":
+            output = "i";
+            break;
+          case "l":
+          case "m":
+          case "n":
+            output = "o";
+            break;
+          case "p":
+          case "q":
+            utput = "o";
+            break;
+          case "r":
+          case "s":
+          case "t":
+          case "v":
+          case "w":
+          case "x":
+          case "y":
+          case "z":
+            output = "u";
+            break;
+        }
+        document.getElementById("demo").innerHTML = output;
+      }
+    </script>
+  </body>
+</html>

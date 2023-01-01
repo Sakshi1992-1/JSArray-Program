@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Finding duplicate values in a JavaScript array</h3>
+    <p>Here, we will find the repeating values in the given array.</p>
+    <p>Original array: [1, 1, 2, 3, 3, 4, 5, 6, 6]</p>
+    <p id="result"></p>
+    <script>
+      // indexOf() and filter()
+      var array = [1, 1, 2, 3, 3, 4, 5, 6, 6];
+      function findDuplicates(arr) {
+        return arr.filter(
+          (currentValue, currentIndex) =>
+            arr.indexOf(currentValue) !== currentIndex
+        );
+      }
+      document.getElementById("result").innerHTML =
+        "Duplicate values are: <b>" + findDuplicates(array) + "</b>";
+    </script>
+  </body>
+</html>
