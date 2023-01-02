@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Kindly check Console</h2>
+    <script>
+      const radha = [
+        "Rada",
+        "Sharma",
+        2023 - 1992,
+        "Designer",
+        ["Ravi", "Neha", "Umari"],
+        true,
+      ];
+      const types = [];
+
+      console.log("===print only string elements===");
+      for (let i = 0; i < radha.length; i++) {
+        //print only string elements
+        if (typeof radha[i] !== "string") continue;
+        console.log(radha[i], typeof radha[i]);
+      }
+      console.log("===print only number using break statement===");
+      for (let i = 0; i < radha.length; i++) {
+        //print only number
+        if (typeof radha[i] === "number") break;
+        console.log(radha[i], typeof radha[i]);
+      }
+    </script>
+  </body>
+</html>
